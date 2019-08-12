@@ -25,7 +25,8 @@ namespace Valutaomregner
     /// </summary>
     public partial class MainWindow : Window
     {
-
+        float v1;
+        float v2;
         public MainWindow()
         {
             InitializeComponent();
@@ -48,7 +49,21 @@ namespace Valutaomregner
             }
             
         }
-                
+
+        private void ChangeK(object sender, EventArgs e)
+        {
+            ComboBox box = sender as ComboBox;
+            if(box.Name == "combo1")
+            {
+                //v1 = float.Parse(((ComboBoxItem)combo1.SelectedItem).Tag.ToString(), System.Globalization.CultureInfo.InvariantCulture);
+            }
+            else if(box.Name == "combo1")
+            {
+                //v2 = float.Parse(((ComboBoxItem)combo2.SelectedItem).Tag.ToString(), System.Globalization.CultureInfo.InvariantCulture);
+            }
+
+
+        }
     }
 
 }
