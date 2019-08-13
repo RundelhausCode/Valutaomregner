@@ -7,16 +7,16 @@
         mc:Ignorable="d"
         Title="Valutaomregner" Height="200" Width="500">
     <Grid>
-        <ComboBox x:Name="combo1" HorizontalAlignment="Left" Margin="80,100,0,0" VerticalAlignment="Top" Width="120" DropDownClosed="ChangeK">
-            <ComboBoxItem Tag="100">DKK</ComboBoxItem>
+        <ComboBox x:Name="combo1" SelectedIndex="0" HorizontalAlignment="Left" Margin="80,100,0,0" VerticalAlignment="Top" Width="120" DropDownClosed="ChangeK">
+            <ComboBoxItem Tag="10000">DKK</ComboBoxItem>
         </ComboBox>
-        <ComboBox x:Name="combo2" HorizontalAlignment="Left" Margin="280,100,0,0" VerticalAlignment="Top" Width="120" DropDownClosed="ChangeK">
-            <ComboBoxItem Tag="100">DKK</ComboBoxItem>
+        <ComboBox x:Name="combo2" HorizontalAlignment="Left" SelectedIndex="8" Margin="280,100,0,0" VerticalAlignment="Top" Width="120" DropDownClosed="ChangeK">
+            <ComboBoxItem Tag="10000">DKK</ComboBoxItem>
         </ComboBox>
-            <TextBox x:Name="value1" HorizontalAlignment="Left" Height="23" Margin="80,40,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="value2" HorizontalAlignment="Left" Height="23" Margin="280,40,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="value1" PreviewKeyUp="Value_PreviewKeyUp"  HorizontalAlignment="Left" Height="23" Margin="80,40,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="value2"  PreviewKeyUp="Value_PreviewKeyUp"  HorizontalAlignment="Left" Height="23" Margin="280,40,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
 
-        <Image HorizontalAlignment="Left" Height="55" Margin="210,60,0,0" VerticalAlignment="Top" Width="60" Source="Resources/arrow.png" />
+        <Image HorizontalAlignment="Left" Height="55" Margin="210,60,0,0" VerticalAlignment="Top" Width="60" Source="Resources/arrow.png" PreviewMouseLeftButtonUp="SwitchValue" />
 
     </Grid>
 </Window>
